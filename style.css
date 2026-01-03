@@ -1,0 +1,1059 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:#0f1724;
+  color:white;
+}
+
+/* ================= NAV ================= */
+#navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:14px 60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(15,23,36,0);
+  transition:.3s;
+  z-index:10;
+}
+#navbar.scrolled{
+  background:rgba(81, 23, 88, 0.92);
+}
+
+nav a{
+  margin:0 14px;
+  color:white;
+  text-decoration:none;
+}
+
+.logo{height:40px}
+
+.btn{
+  padding:10px 18px;
+  border-radius:8px;
+  font-weight:600;
+  text-decoration:none;
+  transition:.3s;
+}
+.btn:hover{
+  transform:translateY(-2px);
+}
+.yellow{background:#ffc800;color:black}
+.outline{border:2px solid #ffc800;color:#ffc800}
+
+/* ================= HERO ================= */
+.hero{
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+}
+.hero-content{
+  position:relative;
+  z-index:1;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+/* Animaciones inicio */
+.hero-content > *{
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp .8s ease forwards;
+}
+.hero-content .online{animation-delay:.1s}
+.hero-content .title-main{animation-delay:.25s}
+.hero-content .title-sub{animation-delay:.4s}
+.hero-content .hero-desc{animation-delay:.55s}
+.hero-content .hero-buttons{animation-delay:.7s}
+.hero-content .server-ip{animation-delay:.85s}
+.hero-content .scroll-indicator{animation-delay:1s}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+
+.online{
+  font-size:13px;
+  padding:6px 14px;
+  border-radius:20px;
+  background:rgba(0,0,0,.55);
+}
+
+.title-main{
+  font-size:64px;
+  color:#e7c206;
+  letter-spacing:2px;
+    text-shadow:0 0 18px rgba(255, 201, 5, 0.89);
+
+}
+
+.title-sub{
+  font-size:64px;
+  font-weight:800;
+}
+
+.hero-desc{
+  max-width:600px;
+  margin:20px 0;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+}
+
+.server-ip{
+  margin-top:15px;
+  opacity:.85;
+}
+
+/* Ruleta */
+.scroll-indicator{margin-top:28px}
+.mouse{
+  width:26px;
+  height:42px;
+  border:2px solid white;
+  border-radius:14px;
+  position:relative;
+}
+.mouse::before{
+  content:"";
+  width:4px;
+  height:8px;
+  background:white;
+  position:absolute;
+  left:50%;
+  top:8px;
+  transform:translateX(-50%);
+  animation:scroll 1.4s infinite;
+}
+@keyframes scroll{
+  from{opacity:1;top:8px}
+  to{opacity:0;top:22px}
+}
+
+/* ================= SOBRE NOSOTROS ================= */
+.about-section{
+  padding:130px 10%;
+  background:linear-gradient(180deg,#1a2333,#121b2b);
+}
+
+.section-title{
+  text-align:center;
+  color:#ffc800;
+  font-size:34px;
+  font-weight:700;
+}
+
+.section-subtitle{
+  text-align:center;
+  margin-top:8px;
+  opacity:.85;
+}
+
+.about-grid{
+  margin-top:70px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-text h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.about-text p{
+  font-size:16px;
+  line-height:1.7;
+  opacity:.9;
+  margin-bottom:18px;
+}
+
+.stats{
+  margin-top:30px;
+  display:flex;
+  gap:40px;
+}
+.stats strong{font-size:28px}
+.stats span{
+  display:block;
+  font-size:13px;
+  opacity:.7;
+}
+
+.skin{
+  width:420px;        /* más grande */
+  max-width:100%;
+  justify-self:center;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.5));
+}
+/* ================= FAQ (MORADO) ================= */
+.faq-section{
+  padding:120px 8%;
+  background:linear-gradient(180deg,#3b2a5f,#24163f);
+}
+
+.faq-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.faq-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.faq-image img{
+  width:460px;          /* AHORA SÍ GRANDE */
+  max-width:none;       /* clave */
+  height:auto;
+  display:block;
+  filter: drop-shadow(0 25px 45px rgba(0,0,0,.6));
+}
+
+
+.faq-item{
+  background:rgba(255,255,255,.06);
+  padding:18px 22px;
+  border-radius:12px;
+  margin-bottom:14px;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+  transition:.3s;
+}
+.faq-item:hover{
+  background:rgba(255,255,255,.1);
+}
+
+/* ================= MODALIDADES (MORADO) ================= */
+.modes-section{
+  padding:120px 8%;
+  background:linear-gradient(180deg,#24163f,#1a102e);
+}
+
+.modes-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:35px;
+}
+
+.mode-card{
+  border-radius:18px;
+  overflow:hidden;
+  background:#26334b;
+  transition:.3s;
+}
+.mode-card:hover{transform:translateY(-6px)}
+
+.mode-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.mode-card h4{
+  position:absolute;
+  bottom:16px;
+  left:20px;
+}
+
+/* ================= CTA ================= */
+.cta-section{
+  padding:80px 8%;
+  display:flex;
+  justify-content:center;
+  background:#1a102e;
+}
+
+.cta-box{
+  max-width:900px;
+  width:100%;
+  padding:45px 40px;
+  border-radius:22px;
+  text-align:center;
+  transition:.3s;
+}
+
+.cta-btn{
+  display:inline-block;
+  padding:13px 34px;
+  border-radius:16px;
+  background:#ffffff;
+  color:#000;
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+  transition:all .35s ease;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+/* ANIMACIÓN AL PASAR EL MOUSE */
+.cta-btn:hover{
+  transform:scale(1.12);
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+/* ================= FOOTER NEGRO ================= */
+.footer{
+  background:#000;
+  padding:60px 8% 30px;
+}
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.footer-links a{
+  margin:0 12px;
+  font-size:14px;
+  opacity:.7;
+}
+.footer-links a:hover{
+  color:#ffc800;
+  opacity:1;
+}
+
+.footer-bottom{
+  margin-top:40px;
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:20px;
+  text-align:center;
+  font-size:13px;
+  opacity:.6;
+}
+
+/* ===============================
+   PALETA MEJORADA (PURPURA + AZUL)
+================================ */
+
+/* Fondo general */
+body{
+  background:#120a1f;
+}
+
+/* SOBRE NOSOTROS */
+.about-section{
+  background:linear-gradient(
+    180deg,
+    #2a1640,
+    #1a0f2e
+  );
+}
+
+/* FAQ */
+.faq-section{
+  background:linear-gradient(
+    180deg,
+    #3a1d63,
+    #24103f
+  );
+}
+
+/* MODALIDADES */
+.modes-section{
+  background:linear-gradient(
+    180deg,
+    #24103f,
+    #160a2b
+  );
+}
+
+/* CTA */
+.cta-section{
+  background:linear-gradient(
+    180deg,
+    #160a2b,
+    #0f071d
+  );
+}
+
+/* CTA caja (mejor contraste) */
+.cta-box{
+  box-shadow:0 0 35px rgba(168,85,247,.35);
+}
+
+/* TITULOS CON TOQUE AMARILLO SUAVE */
+.section-title{
+  color:#facc15;
+}
+
+/* FOOTER FINAL */
+.footer{
+  background:#000;
+}
+
+/* =======================
+   CTA ROTATIVO FINAL
+======================= */
+
+.cta-section{
+  padding:80px 8%;
+  display:flex;
+  justify-content:center;
+}
+
+.cta-box{
+  width:100%;
+  max-width:900px;
+  border-radius:22px;
+  padding:45px 40px;
+  text-align:center;
+  transition:background .6s ease, transform .3s ease;
+}
+
+.cta-box h2{
+  font-size:26px;
+  margin-bottom:12px;
+}
+
+.cta-box p{
+  font-size:15px;
+  opacity:.9;
+  margin-bottom:22px;
+}
+
+/* BOTÓN */
+.cta-btn{
+  display:inline-block;
+  padding:13px 34px;
+  border-radius:16px;
+  background:#ffffff;
+  color:#000;
+  font-weight:700;
+  font-size:14px;
+  text-decoration:none;
+  transition:all .35s ease;
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+/* HOVER */
+.cta-btn:hover{
+  transform:scale(1.12);
+  box-shadow:0 18px 45px rgba(0,0,0,.35);
+}
+
+/* CLICK */
+.cta-btn:active{
+  transform:scale(0.95);
+}
+
+/* CTA clickable completo */
+.cta-box{
+  cursor:pointer;
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.cta-box:hover{
+  transform:scale(1.05);
+  box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.cta-box:active{
+  transform:scale(0.97);
+}
+
+/* ================= FOOTER IMAGE ALIGN FIX ================= */
+
+/* Contenedor del logo + texto */
+.footer-logo{
+  display: flex;
+  align-items: center;
+  gap: 12px;              /* espacio entre imagen y texto */
+}
+
+/* Imagen del footer (tamaño correcto) */
+.footer-logo img{
+  width: 60px;            /* tamaño perfecto como dijiste */
+  height: auto;
+  display: block;
+  opacity: 0.9;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease;
+  margin-top:8px;
+  opacity:.9;
+}
+
+.faq-question{
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  font-weight:600;
+}
+
+.faq-item{
+  display:block;
+}
+
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+}
+
+.faq-answer{
+  margin-top:10px;
+  padding-left:4px;
+  font-size:14px;
+  line-height:1.6;
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+  opacity:.9;
+}
+
+/* ===== FAQ ACORDEÓN ===== */
+
+.faq-item{
+  background:rgba(255,255,255,.05);
+  padding:18px 22px;
+  border-radius:12px;
+  margin-bottom:14px;
+}
+
+.faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.faq-question .icon{
+  font-size:22px;
+  transition:transform .3s ease;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s ease, opacity .3s ease;
+  opacity:0;
+  font-size:14px;
+  line-height:1.6;
+  margin-top:10px;
+}
+
+/* ACTIVO */
+.faq-item.active .faq-answer{
+  max-height:300px;
+  opacity:1;
+}
+
+.faq-item.active .icon{
+  transform:rotate(45deg); /* + -> X */
+}
+
+/* ================= AJUSTE POSICIÓN FAQ ================= */
+
+/* Baja el contenido de las preguntas respecto al título */
+.faq-container{
+  margin-top: 60px;   /* antes estaba muy pegado */
+}
+
+/* Ajusta el título para que no quede tan arriba */
+.faq-section .section-title{
+  margin-bottom: 20px;
+}
+
+/* ================= AJUSTE MODALIDADES ================= */
+
+/* Sube la sección de modalidades */
+.modes-section{
+  padding-top: 80px;   /* antes estaba muy abajo */
+}
+
+/* Opcional: ajusta el título de modalidades */
+.modes-section .section-title{
+  margin-bottom: 40px;
+}
+
+/* ================= SCROLL INDICATOR ================= */
+
+.scroll-indicator{
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  opacity:0.85;
+}
+
+.mouse{
+  width:26px;
+  height:42px;
+  border:2px solid #fff;
+  border-radius:14px;
+  position:relative;
+}
+
+.mouse::before{
+  content:"";
+  width:4px;
+  height:8px;
+  background:#fff;
+  position:absolute;
+  left:50%;
+  top:8px;
+  transform:translateX(-50%);
+  border-radius:4px;
+  animation:scrollWheel 1.4s infinite;
+}
+
+@keyframes scrollWheel{
+  0%{
+    opacity:1;
+    top:8px;
+  }
+  100%{
+    opacity:0;
+    top:22px;
+  }
+}
+
+/* ================= FOOTER ESTILO REGORLAND ================= */
+
+.footer-regorland{
+  background:#000;
+  padding:50px 8% 30px;
+}
+
+.footer-regorland-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+/* LOGO */
+.footer-regorland-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.footer-regorland-logo img{
+  width:55px;
+  height:auto;
+}
+
+.footer-regorland-logo span{
+  font-size:20px;
+  font-weight:700;
+  color:#fff;
+}
+
+/* LINKS */
+.footer-regorland-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.footer-regorland-links a{
+  color:#aaa;
+  font-size:14px;
+  text-decoration:none;
+  transition:.25s;
+}
+
+.footer-regorland-links a:hover{
+  color:#facc15;
+}
+
+/* COPYRIGHT */
+.footer-regorland-copy{
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.1);
+  text-align:center;
+  font-size:13px;
+  color:#777;
+}
+
+.footer-regorland-copy span{
+  color:#facc15;
+  font-weight:600;
+}
+
+/* ================= TITULOS ESTILO REGORLAND ================= */
+
+.section-title{
+  font-size:34px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#facc15;
+  margin-bottom:10px;
+  position:relative;
+  opacity:0;
+  transform:translateY(15px);
+  animation: regorTitle .9s ease forwards;
+}
+
+/* Línea fina debajo (Regorland style) */
+.section-title::after{
+  content:"";
+  display:block;
+  width:70px;
+  height:2px;
+  margin:12px auto 0;
+  background:#facc15;
+  opacity:.8;
+}
+
+/* Descripción elegante */
+.section-desc{
+  text-align:center;
+  max-width:620px;
+  margin:18px auto 70px;
+  font-size:15px;
+  line-height:1.7;
+  color:#e5e7eb;
+  opacity:.75;
+}
+
+/* Animación suave */
+@keyframes regorTitle{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ================= EFECTO SUAVE DE CONTENIDO ================= */
+
+.soft-reveal{
+  opacity:0;
+  transform:translateY(25px);
+  transition:all .9s ease;
+}
+
+.soft-reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= ESPACIADO REGORLAND ================= */
+
+.about-section,
+.faq-section,
+.modes-section{
+  padding-top:100px;
+  padding-bottom:120px;
+}
+
+.faq-container{
+  margin-top:40px;
+}
+
+.modes-grid{
+  margin-top:30px;
+}
+
+/* ================= TITULOS MÁS GORDITOS ================= */
+
+/* TITULOS DE SECCIONES */
+.section-title{
+  font-weight:800;              /* MÁS GORDITO */
+  letter-spacing:2px;
+}
+
+/* LINEA DEBAJO DEL TITULO */
+.section-title::after{
+  height:3px;                   /* un poco más gruesa */
+}
+
+/* TITULO PRINCIPAL PUMALAND */
+.title-main{
+  font-weight:900;              /* BIEN GORDO */
+  letter-spacing:3px;
+}
+
+/* SUBTITULO HERO */
+.title-sub{
+  font-weight:800;
+}
+
+/* TITULOS INTERNOS (Nuestra historia, etc) */
+.about-text h2{
+  font-weight:800;
+}
+
+/* TITULOS DE MODALIDADES */
+.mode-card h4{
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+/* PREGUNTAS FAQ */
+.faq-question{
+  font-weight:700;
+}
+
+/* ================= NAVBAR ANIMADA ================= */
+#navbar{
+  backdrop-filter: blur(10px);
+  transition: background .4s ease, box-shadow .4s ease;
+}
+
+#navbar.scrolled{
+  box-shadow: 0 10px 40px rgba(0,0,0,.45);
+}
+
+/* animación links */
+nav a{
+  position: relative;
+  font-weight: 600;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  left:50%;
+  width:0;
+  height:2px;
+  background:#facc15;
+  transition:.3s;
+  transform:translateX(-50%);
+}
+
+nav a:hover::after{
+  width:60%;
+}
+
+/* ================= IP SERVIDOR EFECTO REGORLAND ================= */
+.server-ip{
+  padding:10px 22px;
+  border-radius:20px;
+  background:rgba(0,0,0,.35);
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,.15),
+    0 0 30px rgba(0,0,0,.6);
+  animation:ipGlow 2.5s infinite alternate;
+}
+
+@keyframes ipGlow{
+  from{
+    box-shadow:
+      0 0 0 2px rgba(255,255,255,.1),
+      0 0 20px rgba(0,0,0,.5);
+  }
+  to{
+    box-shadow:
+      0 0 0 2px rgba(255,255,255,.25),
+      0 0 35px rgba(0,0,0,.85);
+  }
+}
+
+/* ================= SOBRE NOSOTROS EFECTOS ================= */
+
+.about-text h2{
+  font-size:48px;
+  font-weight:900;
+  margin-bottom:22px;
+  animation:fadeLeft .9s ease forwards;
+}
+
+.about-text p{
+  font-size:17px;
+  line-height:1.8;
+  opacity:.92;
+  animation:fadeLeft .9s ease forwards;
+  animation-delay:.2s;
+}
+
+@keyframes fadeLeft{
+  from{
+    opacity:0;
+    transform:translateX(-25px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+.about-section{
+  animation:fadeUpSection 1s ease forwards;
+}
+
+@keyframes fadeUpSection{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ================= NUESTRA HISTORIA ESTILO REGORLAND ================= */
+
+/* TÍTULO GRANDE */
+.about-text h2{
+  font-size:56px;                 /* MÁS GRANDE */
+  font-weight:900;               /* BIEN GORDITO */
+  letter-spacing:1px;
+  line-height:1.1;
+  margin-bottom:28px;
+  color:#ffffff;
+  text-shadow:
+    0 0 20px rgba(255,255,255,.05),
+    0 0 40px rgba(168,85,247,.15);
+  position:relative;
+}
+
+/* línea elegante debajo del título */
+.about-text h2::after{
+  content:"";
+  display:block;
+  width:90px;
+  height:4px;
+  margin-top:16px;
+  background:linear-gradient(90deg,#facc15,#a855f7);
+  border-radius:4px;
+}
+
+/* TEXTO DESCRIPCIÓN (COMO REGORLAND) */
+.about-text p{
+  font-size:18px;                 /* MÁS GRANDE */
+  line-height:1.9;
+  color:#e5e7eb;
+  opacity:.95;
+  max-width:520px;
+  margin-bottom:18px;
+  font-weight:400;
+}
+
+/* PRIMER PÁRRAFO MÁS IMPORTANTE */
+.about-text p:first-of-type{
+  font-size:19px;
+  font-weight:500;
+  color:#f1f5f9;
+}
+
+/* ANIMACIÓN SUAVE DE ENTRADA */
+.about-text h2,
+.about-text p{
+  opacity:0;
+  transform:translateY(20px);
+  animation:historyFade .9s ease forwards;
+}
+
+.about-text p:nth-of-type(1){animation-delay:.2s}
+.about-text p:nth-of-type(2){animation-delay:.35s}
+
+@keyframes historyFade{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ================= ESTADÍSTICAS REGORLAND ================= */
+
+.about-stats{
+  margin-top:45px;
+  display:flex;
+  gap:50px;
+  flex-wrap:wrap;
+}
+
+/* BLOQUE */
+.about-stats .stat{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  position:relative;
+  opacity:0;
+  transform:translateY(25px);
+  animation:statsFade .9s ease forwards;
+}
+
+/* delays suaves */
+.about-stats .stat:nth-child(1){animation-delay:.2s}
+.about-stats .stat:nth-child(2){animation-delay:.4s}
+.about-stats .stat:nth-child(3){animation-delay:.6s}
+
+/* NUMERO GRANDE */
+.about-stats strong{
+  font-size:42px;
+  font-weight:900;
+  color:#facc15;
+  letter-spacing:1px;
+  text-shadow:
+    0 0 15px rgba(250,204,21,.35),
+    0 0 35px rgba(168,85,247,.25);
+}
+
+/* TEXTO */
+.about-stats span{
+  font-size:14px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:#e5e7eb;
+  opacity:.8;
+}
+
+/* línea decorativa */
+.about-stats .stat::after{
+  content:"";
+  width:36px;
+  height:3px;
+  margin-top:8px;
+  background:linear-gradient(90deg,#facc15,#a855f7);
+  border-radius:3px;
+}
+
+/* animación */
+@keyframes statsFade{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .about-stats{
+    justify-content:center;
+    gap:35px;
+  }
+  .about-stats strong{
+    font-size:36px;
+  }
+}
+
