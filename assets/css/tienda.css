@@ -16,7 +16,7 @@ body {
 .bg-overlay {
   position: fixed;
   inset: 0;
-  background: url("SpawnimagenInicio.png") center/cover no-repeat;
+  background: url("../images/SpawnimagenInicio.png") center/cover no-repeat;
   opacity: 0.18;
   filter: blur(4px);
   transform: scale(1.1);
