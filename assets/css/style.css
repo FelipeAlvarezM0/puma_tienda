@@ -656,7 +656,45 @@ nav a:hover::after {
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* Tablets y dispositivos medianos */
+/* Desktop Grande: 1920×1080 es el diseño base */
+
+/* Desktop Mediano: 1536×864, 1366×768 */
+@media (max-width: 1600px) {
+  #navbar {
+    padding: 14px 50px;
+  }
+
+  .about-section,
+  .faq-section,
+  .modes-section {
+    padding: 100px 8% 120px;
+  }
+}
+
+@media (max-width: 1366px) {
+  #navbar {
+    padding: 14px 40px;
+  }
+
+  .title-main,
+  .title-sub {
+    font-size: 56px;
+  }
+
+  .about-text h2 {
+    font-size: 48px;
+  }
+
+  .faq-image img {
+    width: 400px;
+  }
+
+  .skin {
+    width: 380px;
+  }
+}
+
+/* Tablets: 768×1024, 810×1080, 820×1180 */
 @media (max-width: 1024px) {
   #navbar {
     padding: 14px 30px;
@@ -700,9 +738,37 @@ nav a:hover::after {
   .modes-section {
     padding: 80px 6% 100px;
   }
+
+  .skin {
+    width: 340px;
+  }
 }
 
-/* Móviles */
+/* Tablet 820×1180 específico */
+@media (max-width: 820px) {
+  #navbar {
+    padding: 12px 25px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .title-main,
+  .title-sub {
+    font-size: 42px;
+  }
+
+  .about-text h2 {
+    font-size: 38px;
+  }
+
+  .skin {
+    width: 320px;
+  }
+}
+
+/* Móviles: 768×1024 y menores */
 @media (max-width: 768px) {
   #navbar {
     padding: 12px 20px;
@@ -742,11 +808,12 @@ nav a:hover::after {
 
   .title-main,
   .title-sub {
-    font-size: 36px;
+    font-size: 38px;
   }
 
   .hero-desc {
     font-size: 14px;
+    padding: 0 10px;
   }
 
   .hero-buttons {
@@ -832,11 +899,11 @@ nav a:hover::after {
   }
 }
 
-/* Móviles pequeños */
+/* Móviles medianos */
 @media (max-width: 480px) {
   .title-main,
   .title-sub {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .section-title {
@@ -844,7 +911,7 @@ nav a:hover::after {
   }
 
   .about-text h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   nav a {
@@ -858,5 +925,149 @@ nav a:hover::after {
 
   .faq-answer {
     font-size: 13px;
+  }
+
+  .hero-desc {
+    font-size: 13px;
+  }
+
+  .about-stats strong {
+    font-size: 32px;
+  }
+
+  .skin {
+    width: 260px;
+  }
+
+  .faq-image img {
+    width: 240px;
+  }
+}
+
+/* Móviles: 360×800, 390×844, 393×873 */
+@media (max-width: 393px) {
+  #navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .title-main,
+  .title-sub {
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  .online {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .hero-desc {
+    font-size: 13px;
+    max-width: 90%;
+  }
+
+  .server-ip {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .about-stats {
+    gap: 20px;
+  }
+
+  .about-stats strong {
+    font-size: 28px;
+  }
+
+  .about-stats span {
+    font-size: 12px;
+  }
+
+  .skin {
+    width: 240px;
+  }
+
+  .faq-image img {
+    width: 220px;
+  }
+
+  .faq-question {
+    font-size: 13px;
+  }
+
+  .faq-answer {
+    font-size: 12px;
+  }
+
+  .faq-item {
+    padding: 14px 18px;
+  }
+
+  .mode-card img {
+    height: 150px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  nav a {
+    font-size: 11px;
+    margin: 0 5px;
+  }
+
+  .footer-regorland-links a {
+    font-size: 12px;
+  }
+
+  .footer-regorland-copy {
+    font-size: 11px;
+  }
+}
+
+/* Móvil 360×800 */
+@media (max-width: 360px) {
+  .title-main,
+  .title-sub {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 22px;
+  }
+
+  .skin {
+    width: 220px;
+  }
+
+  .faq-image img {
+    width: 200px;
+  }
+
+  .about-section,
+  .faq-section,
+  .modes-section {
+    padding: 50px 4% 70px;
   }
 }

@@ -650,7 +650,51 @@ body::before {
 
 /* ================= RESPONSIVE DESIGN ================= */
 
-/* Tablets y dispositivos medianos */
+/* Desktop Grande: 1920×1080 es el diseño base */
+
+/* Desktop Mediano: 1536×864, 1366×768 */
+@media (max-width: 1600px) {
+  .layout {
+    padding: 35px;
+    max-width: 95%;
+  }
+
+  .hero {
+    padding: 35px;
+  }
+
+  .banner-content h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .layout {
+    padding: 32px;
+  }
+
+  .hero {
+    padding: 32px;
+  }
+
+  .banner-slider {
+    height: 320px;
+  }
+
+  .banner-content h1 {
+    font-size: 34px;
+  }
+
+  .sidebar {
+    width: 260px;
+  }
+
+  .product-card {
+    width: 220px;
+  }
+}
+
+/* Tablets: 768×1024, 810×1080, 820×1180 */
 @media (max-width: 1024px) {
   .layout {
     padding: 30px;
@@ -676,9 +720,40 @@ body::before {
   .product-grid {
     justify-content: center;
   }
+
+  .product-card {
+    width: 210px;
+  }
 }
 
-/* Tablets pequeñas */
+/* Tablet 820×1180 específico */
+@media (max-width: 820px) {
+  .topbar {
+    padding: 22px;
+  }
+
+  .logo img {
+    height: 75px;
+  }
+
+  .banner-slider {
+    height: 280px;
+  }
+
+  .banner-content h1 {
+    font-size: 30px;
+  }
+
+  .sidebar {
+    width: 240px;
+  }
+
+  .layout {
+    padding: 28px;
+  }
+}
+
+/* Tablets pequeñas: 768×1024 */
 @media (max-width: 768px) {
   .topbar {
     grid-template-columns: 1fr;
@@ -753,7 +828,7 @@ body::before {
   }
 }
 
-/* Móviles */
+/* Móviles medianos */
 @media (max-width: 480px) {
   .topbar {
     padding: 15px;
@@ -869,5 +944,214 @@ body::before {
 
   .product-card h4 {
     font-size: 16px;
+  }
+}
+
+/* Móviles: 360×800, 390×844, 393×873 */
+@media (max-width: 393px) {
+  .topbar {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .btn-cart {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+  .online {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .layout {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 12px;
+  }
+
+  .banner-slider {
+    height: 180px;
+  }
+
+  .banner-content h1 {
+    font-size: 20px;
+  }
+
+  .banner-content {
+    padding: 12px;
+  }
+
+  .badge {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .price small {
+    font-size: 12px;
+  }
+
+  .banner-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .banner-dots {
+    bottom: 8px;
+  }
+
+  .banner-dots span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .sidebar {
+    padding: 12px;
+  }
+
+  .sidebar-title {
+    padding: 10px;
+  }
+
+  .sidebar-title h2 {
+    font-size: 13px;
+  }
+
+  .menu-start,
+  .menu-btn {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .menu-start img,
+  .menu-btn img {
+    width: 22px;
+  }
+
+  .donator-panel {
+    padding: 15px;
+  }
+
+  .donator-panel h4 {
+    font-size: 13px;
+  }
+
+  .donator-panel strong {
+    font-size: 14px;
+  }
+
+  .donator-panel p {
+    font-size: 11px;
+  }
+
+  .welcome {
+    padding: 18px;
+  }
+
+  .welcome h2 {
+    font-size: 16px;
+  }
+
+  .welcome p {
+    font-size: 13px;
+  }
+
+  .info-panel {
+    padding: 15px;
+  }
+
+  .info-panel p,
+  .support-text {
+    font-size: 13px;
+  }
+
+  .support-panel h3 {
+    font-size: 16px;
+  }
+
+  .btn-discord,
+  .btn-mail {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-card h4 {
+    font-size: 15px;
+  }
+
+  .product-card .price {
+    font-size: 16px;
+  }
+
+  .product-card button {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* Móvil 360×800 */
+@media (max-width: 360px) {
+  .topbar {
+    padding: 10px;
+  }
+
+  .btn-cart {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .banner-slider {
+    height: 160px;
+  }
+
+  .banner-content h1 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .sidebar-title h2 {
+    font-size: 12px;
+  }
+
+  .menu-start,
+  .menu-btn {
+    padding: 9px;
+    font-size: 12px;
+  }
+
+  .welcome h2 {
+    font-size: 15px;
+  }
+
+  .info-panel p,
+  .support-text {
+    font-size: 12px;
+  }
+
+  .product-card h4 {
+    font-size: 14px;
   }
 }
