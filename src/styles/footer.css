@@ -1,0 +1,90 @@
+.footer-regorland {
+  background: #000;
+  padding: 50px 8% 30px;
+}
+
+.footer-regorland-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-regorland-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-regorland-logo img {
+  width: 55px;
+  height: auto;
+}
+
+.footer-regorland-logo span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-regorland-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-regorland-links a {
+  color: #aaa;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-regorland-links a:hover {
+  color: #facc15;
+}
+
+.footer-regorland-copy {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+.footer-regorland-copy span {
+  color: #facc15;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .footer-regorland {
+    padding: 40px 5% 25px;
+  }
+
+  .footer-regorland-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-regorland-links {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-regorland-links a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 393px) {
+  .footer-regorland-links a {
+    font-size: 12px;
+  }
+
+  .footer-regorland-copy {
+    font-size: 11px;
+  }
+}
