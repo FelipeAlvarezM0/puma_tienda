@@ -7,7 +7,7 @@ export function createFAQ() {
 
     <div class="faq-container">
       <div class="faq-image">
-        <img src="/assets/images/Pregunta.png" alt="FAQ">
+        <img src="/assets/images/pregunta.png" alt="FAQ">
       </div>
 
       <div class="faq-list">

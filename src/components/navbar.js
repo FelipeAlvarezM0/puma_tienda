@@ -2,7 +2,7 @@ export function createNavbar() {
   const nav = document.createElement('header');
   nav.id = 'navbar';
   nav.innerHTML = `
-    <img src="/assets/images/LogoPL.png" class="logo" alt="PumaLand Logo">
+    <img src="/assets/images/logopl.png" class="logo" alt="PumaLand Logo">
 
     <nav>
       <a href="#about">Sobre Nosotros</a>

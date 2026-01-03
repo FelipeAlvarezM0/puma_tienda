@@ -1,7 +1,7 @@
 export function createHero() {
   const hero = document.createElement('section');
   hero.className = 'hero';
-  hero.style.backgroundImage = "url('/assets/images/SpawnimagenInicio.png')";
+  hero.style.backgroundImage = "url('/assets/images/spawnimageninicio.png')";
   hero.innerHTML = `
     <div class="hero-overlay"></div>
 

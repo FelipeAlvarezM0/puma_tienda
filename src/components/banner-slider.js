@@ -4,7 +4,7 @@ export function createBannerSlider() {
   section.innerHTML = `
     <div class="hero-banner banner-slider">
       <div class="banner-slide active">
-        <img src="/assets/images/Bannerps.png" class="banner-bg" alt="Banner Navidad">
+        <img src="/assets/images/bannerps.png" class="banner-bg" alt="Banner Navidad">
 
         <div class="banner-content">
           <span class="badge">EN OFERTA</span>
@@ -18,38 +18,6 @@ export function createBannerSlider() {
         </div>
       </div>
 
-      <div class="banner-slide">
-        <img src="/assets/images/Bannerps2.png" class="banner-bg" alt="Banner VIP">
-
-        <div class="banner-content">
-          <span class="badge gold">RANGO VIP</span>
-          <h1>VIP PERMANENTE</h1>
-          <p class="price">€19.99</p>
-
-          <div class="banner-buttons">
-            <button class="btn-primary">Comprar</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="banner-slide">
-        <img src="/assets/images/Bannerps3.png" class="banner-bg" alt="Banner HERO">
-
-        <div class="banner-content">
-          <span class="badge purple">RANGO HERO</span>
-          <h1>HERO+</h1>
-          <p class="price">€59.99</p>
-
-          <div class="banner-buttons">
-            <button class="btn-primary">Comprar</button>
-          </div>
-        </div>
-      </div>
-
-      <button class="banner-arrow left">&#10094;</button>
-      <button class="banner-arrow right">&#10095;</button>
-
-      <div class="banner-dots"></div>
     </div>
   `;
 

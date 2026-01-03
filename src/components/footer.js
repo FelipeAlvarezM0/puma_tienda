@@ -4,7 +4,7 @@ export function createFooter() {
   footer.innerHTML = `
     <div class="footer-regorland-container">
       <div class="footer-regorland-logo">
-        <img src="/assets/images/HomeLogodeinicio.png" alt="Logo">
+        <img src="/assets/images/homelogodeinicio.png" alt="Logo">
         <span>PumaLand</span>
       </div>
 

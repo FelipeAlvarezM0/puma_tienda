@@ -7,7 +7,7 @@ export function createTiendaHeader() {
     </div>
 
     <div class="logo">
-      <img src="/assets/images/HomeLogodeinicio.png" alt="PumaLand">
+      <img src="/assets/images/homelogodeinicio.png" alt="PumaLand">
     </div>
 
     <div class="top-right">

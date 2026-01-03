@@ -31,7 +31,7 @@ export function createAbout() {
         </div>
       </div>
 
-      <img src="/assets/images/Nosotros2.png" class="skin" alt="Personaje Minecraft">
+      <img src="/assets/images/nosotros2.png" class="skin" alt="Personaje Minecraft">
     </div>
   `;
 

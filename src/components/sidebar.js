@@ -8,33 +8,33 @@ export function createSidebar() {
     </div>
 
     <div class="menu-start active">
-      <img src="/assets/images/inicio.png" alt="Inicio">
+      <img src="/assets/images/imagentienda5.png" alt="Inicio">
       <span>Inicio</span>
     </div>
 
     <div class="menu-list">
       <div class="menu-btn brown">
-        <img src="/assets/images/ofertas.png" alt="Ofertas">
+        <img src="/assets/images/imagentienda5.png" alt="Ofertas">
         <span>Ofertas Especiales</span>
       </div>
 
       <div class="menu-btn purple">
-        <img src="/assets/images/cosmeticos.png" alt="Cosméticos">
+        <img src="/assets/images/imagentienda5.png" alt="Cosméticos">
         <span>Cosméticos Exclusivos</span>
       </div>
 
       <div class="menu-btn gold">
-        <img src="/assets/images/rangos.png" alt="Rangos">
+        <img src="/assets/images/imagentienda5.png" alt="Rangos">
         <span>Rangos Exclusivos</span>
       </div>
 
       <div class="menu-btn discord">
-        <img src="/assets/images/donacion.png" alt="Donación">
+        <img src="/assets/images/imagentienda5.png" alt="Donación">
         <span>Donación</span>
       </div>
 
       <div class="menu-btn green">
-        <img src="/assets/images/llaves.png" alt="Llaves">
+        <img src="/assets/images/imagentienda5.png" alt="Llaves">
         <span>Llaves</span>
       </div>
 

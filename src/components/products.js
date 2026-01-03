@@ -43,19 +43,19 @@ export function createProducts() {
       <h3>RANGOS PERMANENTES</h3>
       <div class="product-grid">
         <div class="product-card">
-          <div class="product-img"><img src="/assets/images/vip.png" alt="Rango VIP"></div>
+          <div class="product-img"><img src="/assets/images/imagentienda5.png" alt="Rango VIP"></div>
           <h4>VIP</h4>
           <span class="price">€19.99</span>
           <button>Comprar</button>
         </div>
         <div class="product-card highlight">
-          <div class="product-img"><img src="/assets/images/vipplus.png" alt="Rango VIP+"></div>
+          <div class="product-img"><img src="/assets/images/imagentienda5.png" alt="Rango VIP+"></div>
           <h4>VIP+</h4>
           <span class="price">€29.99</span>
           <button>Comprar</button>
         </div>
         <div class="product-card best">
-          <div class="product-img"><img src="/assets/images/hero.png" alt="Rango HERO"></div>
+          <div class="product-img"><img src="/assets/images/imagentienda5.png" alt="Rango HERO"></div>
           <h4>HERO</h4>
           <span class="price">€59.99</span>
           <button>Comprar</button>
