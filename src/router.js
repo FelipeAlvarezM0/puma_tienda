@@ -1,9 +1,9 @@
 import { renderHome } from './pages/home.js';
-import { renderTienda } from './pages/tienda.js';
+import { initTienda } from './pages/tienda-nueva.js';
 
 const routes = {
   '/': renderHome,
-  '/tienda': renderTienda,
+  '/tienda': initTienda,
 };
 
 export function navigateTo(path) {
@@ -11,14 +11,18 @@ export function navigateTo(path) {
   router();
 }
 
-export function router() {
+export async function router() {
   const path = window.location.pathname;
   const route = routes[path] || renderHome;
 
   const app = document.getElementById('app');
   app.setAttribute('data-route', path);
 
-  route();
+  if (route.constructor.name === 'AsyncFunction') {
+    await route();
+  } else {
+    route();
+  }
 }
 
 window.addEventListener('popstate', router);
